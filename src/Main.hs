@@ -1,7 +1,6 @@
 {-# LANGUAGE DataKinds, TypeOperators, OverloadedStrings #-}
 module Main where
 
-import Control.Monad.Trans.Either
 import Servant
 import Network.Wai
 import Network.Wai.Handler.Warp
