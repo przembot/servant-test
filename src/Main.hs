@@ -7,10 +7,10 @@ import Network.Wai
 import Network.Wai.Handler.Warp
 import Data.Text
 
-type API = "test" :> Get '[JSON] (Headers '[Header "Content-Type" Text] Text)
+type API = "test" :> Get '[JSON] Text
 
 test :: Server API
-test = return $ addHeader "application/json; charset=utf8" "ąółżźć sdfasdf"
+test = return "ąółżźć sdfasdf"
 
 proxyAPI :: Proxy API
 proxyAPI = Proxy
